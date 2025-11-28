@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+}
+
+.wrapper{
+    width: 100%;
+    padding: 0 30px;
+}
+
+select{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+}
+
+#home .header{
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    height: 84px;
+    width: 100%;
+}
+
+#home .logo{
+    width: 14%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+#home .logo a{
+    display: block;
+    height: 100%;
+}
+
+#home .logo button{
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#home .search-box{
+    background: rgba(248 248 248);
+    border-radius: 16px;
+    width: 68%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
+    margin: 0 30px;
+}
+
+#home .search-box select{
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #747474;
+}
+
+#home .search-box form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+}
+
+#home .search-box input{
+    width: 80%;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #747474;
+    padding: 8px;
+}
+
+#home .search-box input:focus {
+    outline: none;
+    border: 2px solid #8fbdf3;
+    border-radius: 10px;
+    box-shadow: 0 0 4px rgba(74, 144, 226, 0.5);
+}
+
+#home .search-box form img{
+    width: 24px;
+    height: 24px;
+}
+
+#home .nav{
+    width: 60%;
+}
+#home .nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    list-style: none;
+}
+
+#home .nav a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 600;
+}
+
+#home .nav img{
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+}
+
+#home .icons{
+    width: 40%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#home .spotlight{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/banner-1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 100px;
+}
+
+#home .spotlight .top{
+    width: 50%;
+    border: 1px solid red;
+    font-size: 26px;
+    font-weight: 700;
+}
