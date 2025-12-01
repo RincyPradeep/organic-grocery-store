@@ -9,8 +9,11 @@
 
     <link rel="stylesheet" href="style.css" type="text/css" />
 
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
 </head>
+
 <body>
     <section id="home">
         <!-- header section -->
@@ -119,25 +122,74 @@
         <section class="wrapper">
             <div class="top">
                 <h2>Category</h2>
-                <div>
+                <div style="display: flex; align-items: center; gap: 10px;">
                     <a href="#" class="btn-primary">View All</a>
-                    <!-- Slider arrows -->
-                    <!-- <div class="slider-arrows">
-                        <div class="swiper-button-prev cat-prev"><</div>
-                        <div class="swiper-button-next cat-next">></div>
-                    </div> -->
+                    <!-- Slider buttons -->
+                    <div class="custom-swiper-buttons">
+                        <div class="btn-prev">‹</div>
+                        <div class="btn-next">›</div>
+                    </div>
                 </div>
             </div>
-            <!-- <div class="bottom">
-                <a href="#">
-                    <img src="./images/fruits.jpg" alt="fruits">
-                    <h4>Fruits & Veges</h4>
-                </a>
-            </div> -->
             
-             
+            <div class="bottom swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/fruits.jpg" alt="fruits">
+                        <h4>Fruits & Veges</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/sweets.jpg" alt="sweets">
+                        <h4>Bread & Sweets</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/fruits.jpg" alt="fruits">
+                        <h4>Fruits & Veges</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/beverages.jpg" alt="beverages">
+                        <h4>Beverages</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/meat.jpg" alt="meat">
+                        <h4>Meat Products</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/bread.jpg" alt="bread">
+                        <h4>Bread</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/meat.jpg" alt="meat">
+                        <h4>Meat Products</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/beverages.jpg" alt="beverages">
+                        <h4>Beverages</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/sweets.jpg" alt="sweets">
+                        <h4>Breads & Sweets</h4>
+                    </a>
+                    <a href="#" class="swiper-slide">
+                        <img src="./images/bread.jpg" alt="bread">
+                        <h4>Bread</h4>
+                    </a>
+                </div>
+            </div>
         </section>
      </section>
 
+     <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper(".mySwiper", {
+            slidesPerView: 8,
+            spaceBetween: 20,  
+            navigation: {
+                nextEl: ".btn-next",
+                prevEl: ".btn-prev",
+            },
+        });
+    </script>
 </body>
 </html>
