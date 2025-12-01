@@ -8,6 +8,7 @@ body{
     font-family: "Inter", sans-serif;
     font-size: 16px;
     letter-spacing: 0.03em;
+    color: #212529;
 }
 
 .wrapper{
@@ -20,6 +21,31 @@ select{
     font-size: 16px;
     font-weight: 400;
     line-height: 2;
+}
+
+button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.btn-primary{
+    color: #fff;
+    background-color: #6BB252;
+    padding: 6px 12px;
+    margin-right: 8px;
+    border-radius: 6px;
+}
+
+.btn-primary:hover{
+    background-color: #f7a422;
+    transition: all .15s ease-in-out;
+}
+
+a{
+    text-decoration: none;
+    color: #212529;
 }
 
 #home .header{
@@ -111,9 +137,8 @@ select{
 }
 
 #home .nav a{
-    text-decoration: none;
     color: #000;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 #home .nav img{
@@ -128,8 +153,14 @@ select{
     justify-content: end;
     align-items: center;
     gap: 20px;
-    cursor: pointer;
 }
+
+/* #home .icons button{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+} */
 
 #home .spotlight{
     width: 100%;
@@ -173,7 +204,6 @@ select{
 }
 
 #home .spotlight .top .button a{
-    text-decoration: none;
     color: #fff;
     border-radius: 32px;
     padding: 18px 24px;
@@ -274,4 +304,87 @@ select{
     font-size: 16px;
     font-weight: 400;
     line-height: 2;
+}
+
+/* category */
+#category{
+    padding: 48px 0;
+    overflow: hidden;
+}
+
+#category .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 48px;
+}
+
+#category .top h2{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#category .bottom a{
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width:max-content;
+
+}
+
+#category .bottom img{
+    border-radius: 50%;
+}
+
+#category .bottom h4{
+    margin: 16px 0 8px;
+}
+
+/* -------------------- */
+#category {
+  width: 100%;
+  padding: 40px 0;
+}
+
+
+.slider-arrows {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ROUND ARROW BUTTONS */
+.swiper-button-prev.cat-prev,
+.swiper-button-next.cat-next {
+  width: 38px;
+  height: 38px;
+  background: #f2f2f2;
+  border-radius: 50%;
+}
+
+.swiper-button-prev.cat-prev::after,
+.swiper-button-next.cat-next::after {
+  font-size: 16px;
+  color: #000;
+}
+
+/* Category Items */
+.category-item {
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+}
+
+.category-item img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.category-item p {
+  font-size: 16px;
+  margin-top: 5px;
 }
