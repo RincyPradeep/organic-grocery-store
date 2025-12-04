@@ -357,7 +357,7 @@ a{
     gap: 10px;
 }
 
-.btn-prev,.btn-next,.btn-prev2,.btn-next2 {
+.btn-prev,.btn-next,.btn-prev2,.btn-next2, .btn-prev3,.btn-next3, .btn-prev4,.btn-next4 {
   width: 38px;
   height: 38px;
   background-color: #F1F1F1;
@@ -370,18 +370,18 @@ a{
   cursor: pointer;
   user-select: none;
 }
-.btn-prev.swiper-button-disabled,
-.btn-next.swiper-button-disabled,
-.btn-prev2.swiper-button-disabled,
-.btn-next2.swiper-button-disabled {
+.btn-prev.swiper-button-disabled,.btn-next.swiper-button-disabled,
+.btn-prev2.swiper-button-disabled,.btn-next2.swiper-button-disabled,
+.btn-prev3.swiper-button-disabled,.btn-next3.swiper-button-disabled,
+.btn-prev4.swiper-button-disabled,.btn-next4.swiper-button-disabled {
   opacity: 0.3;
   pointer-events: none;
   cursor: default;
 }
-.btn-prev:hover, .btn-prev2:hover{
+.btn-prev:hover, .btn-prev2:hover, .btn-prev3:hover, .btn-prev4:hover{
     background-color: #6BB252;
 }
-.btn-next:hover, .btn-next2:hover{
+.btn-next:hover, .btn-next2:hover, .btn-next3:hover, .btn-next4:hover{
     background-color: #6BB252;
 }
 
@@ -635,22 +635,23 @@ a{
     width: 100%;
 }
 
-/* featured products */
-#featured-products{
+/* featured products, popular products & just arrived products*/
+#featured-products, #popular-products, #arrived-products{
     margin-bottom: 0;
 }
 
-#featured-products .cards{
+#featured-products .cards, #popular-products .cards, #arrived-products .cards{
     flex-wrap: nowrap;
 }
 
-#featured-products .card{
+#featured-products .card, #popular-products .card, #arrived-products .card{
     flex: 0 0 auto;  
     width: auto;   
     position: static;  
 }
 
-#featured-products .cards .cart-detail{
+#featured-products .cards .cart-detail, 
+#popular-products .cards .cart-detail, #arrived-products .cards .cart-detail{
     position: static;   
 }
 
