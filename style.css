@@ -718,3 +718,89 @@ a{
 #contact .contact-container .right button:hover{
     background-color: #424649;
 }
+
+/* blog */
+#blog{
+    margin-bottom: 100px;
+}
+#blog .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0;
+}
+
+#blog .top h2{
+    font-size: 32px;
+    font-weight: 700;
+}
+
+#blog .blog-cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+#blog .blog-cards .blog-card{
+    width: 32%;
+    padding: 24px;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    border-radius: 6px;
+    background-color: #fff;
+    list-style: none;
+}
+#blog .blog-cards .blog-card img{
+    width: 100%;
+}
+#blog .blog-cards .blog-card-detail{
+    padding: 16px;
+    color: #747474;
+}
+#blog .blog-cards .blog-card-detail div{
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin: 8px 0;
+}
+#blog .blog-cards .blog-card-detail div i{
+    margin-right: 5px;
+}
+#blog .blog-cards .blog-card-detail h3{
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+#blog .blog-cards .blog-card-detail p{
+    line-height: 2;
+}
+
+/* online app store */
+#online-app .app-container{
+    background-color: #ffc107;
+    border-radius: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 48px;
+    padding-top: 48px;
+}
+#online-app .app-container .app-content h5{
+    font-size: 32px;
+}
+#online-app .app-container .app-content p{
+    line-height: 2;
+    color: #747474;
+    margin-bottom: 16px;
+}
+#online-app .app-container .app-image{
+    width: 35%;
+    display: flex;
+    /* flex-basis: end; */
+}
+#online-app .app-container .app-image img{
+    max-width: 100%;
+    height: auto;
+}
