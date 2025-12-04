@@ -340,13 +340,12 @@ a{
     margin: 16px 0 8px;
 }
 
-#category .custom-swiper-buttons{
+.custom-swiper-buttons{
     display: flex;
     gap: 10px;
 }
 
-#category .btn-prev,
-.btn-next {
+.btn-prev,.btn-next,.btn-prev2,.btn-next2 {
   width: 38px;
   height: 38px;
   background-color: #F1F1F1;
@@ -360,34 +359,37 @@ a{
   user-select: none;
 }
 .btn-prev.swiper-button-disabled,
-.btn-next.swiper-button-disabled {
+.btn-next.swiper-button-disabled,
+.btn-prev2.swiper-button-disabled,
+.btn-next2.swiper-button-disabled {
   opacity: 0.3;
   pointer-events: none;
   cursor: default;
 }
-#category .btn-prev:hover{
+.btn-prev:hover, .btn-prev2:hover{
     background-color: #6BB252;
 }
-#category .btn-next:hover{
+.btn-next:hover, .btn-next2:hover{
     background-color: #6BB252;
 }
 
-/* selling products */
-#selling-products .top{
+/* selling products & Featured products */
+.products{
+    margin-bottom: 100px;
+}
+.products .top{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 24px 0;
 }
 
-#selling-products .top h2{
+.products .top h2{
     font-size: 32px;
     font-weight: 700;
 }
 
-#selling-products .bottom ul{
-    margin-bottom: 50px;
-
+.products .cards{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -395,7 +397,7 @@ a{
     list-style: none;
 }
 
-#selling-products .bottom li{
+.products .card{
     height: min-content;
     width: 18%;
     padding: 16px;
@@ -408,27 +410,27 @@ a{
     position: relative;
 }
 
-#selling-products .bottom li a{
+.products .card a{
     text-align: center;
     margin-bottom: 16px;
 }
 
-#selling-products .bottom li a img{
+.products .card a img{
     max-height: 210px;
     height: auto;
 }
 
-#selling-products .bottom .card-detail{
+.products .cards .card-detail{
     text-align: center;
 }
 
-#selling-products .bottom .card-detail h3{
+.products .cards .card-detail h3{
     font-size: 16px;
     font-weight: 400;
     margin-bottom: 8px;
 }
 
-#selling-products .bottom .card-detail .rating{
+.products .cards .card-detail .rating{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -436,12 +438,12 @@ a{
     margin-bottom: 8px;
 }
 
-#selling-products .bottom .card-detail .rating span{
+.products .cards .card-detail .rating span{
     color: #747474;
     font-weight: 400;
 }
 
-#selling-products .bottom .card-detail .price-detail{
+.products .cards .card-detail .price-detail{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -449,23 +451,23 @@ a{
     margin-bottom: 8px;
 }
 
-#selling-products .bottom .card-detail .price-detail del{
+.products .cards .card-detail .price-detail del{
     color: #747474;
 }
 
-#selling-products .bottom .card-detail .price-detail .price{
+.products .cards .card-detail .price-detail .price{
     color: #212529;
     font-weight: 600;
 }
 
-#selling-products .bottom .card-detail .price-detail .off{
+.products .cards .card-detail .price-detail .off{
     color: #21252980;
     border: 1px solid #adb5bd;
     padding: 4px;
     font-size: 12px;
 }
 
-#selling-products .bottom .cart-detail{
+.products .cards .cart-detail{
     display: none;
     position: absolute;      
     bottom: -45px;            
@@ -475,18 +477,18 @@ a{
     padding: 16px;
 }
 
-#selling-products .bottom li.card:hover .cart-detail{
+.products .cards li.card:hover .cart-detail{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 4px;
 }
-#selling-products .bottom li.card:hover{
+.products .cards li.card:hover{
     box-shadow: 0px 20px 44px rgba(0, 0, 0, 0.08);
     z-index: 100;
 }
 
-#selling-products .bottom .cart-detail .quantity{
+.products .cards .cart-detail .quantity{
     width: 25%;
     padding: 8px;
     border: 1px solid #adb5bd;
@@ -494,19 +496,19 @@ a{
     border-radius: 6px;
 }
 
-#selling-products .bottom .cart-detail .quantity input{
+.products .cards .cart-detail .quantity input{
     width: 100%;
     border: none;
     outline: none;
 }
-#selling-products .bottom .cart-detail .cart-btn{
+.products .cards .cart-detail .cart-btn{
     display: flex;
     align-items: center;
     gap: 4px;
     cursor: pointer;
 }
 
-#selling-products .bottom .cart-detail .wishlist-btn{
+.products .cards .cart-detail .wishlist-btn{
     width: 16%;
     padding: 10px;
     border: 1px solid #adb5bd;
@@ -517,10 +519,119 @@ a{
     align-items: center;
 }
 
-#selling-products .bottom .cart-detail .wishlist-btn:hover{
+.products .cards .cart-detail .wishlist-btn:hover{
     background-color: #212529;
 }
 
-#selling-products .bottom .cart-detail .wishlist-btn:hover i {
+.products .cards .cart-detail .wishlist-btn:hover i {
     color: white;
+}
+
+/* banner */
+#banner-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+#banner-container .banner-left{
+    width: 58%;
+    height: 500px;
+    background: url(images/banner-ad-1.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#banner-container .banner-right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 40%;
+}
+
+#banner-container .banner-right-top{
+    width: 100%;
+    height: 49%;
+    background: url(images/banner-ad-2.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#banner-container .banner-right-bottom{
+    width: 100%;
+    height: 49%;
+    background: url(images/banner-ad-3.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+#banner-container .banner-content{
+    padding: 48px;
+    color: #FFFFFF;
+}
+
+#banner-container .banner-content h3{
+    font-weight: 700;
+    margin-bottom: 8px;
+    font-size: 28px;
+}
+
+#banner-container .banner-content p{
+    margin-bottom: 16px;
+}
+
+#banner-container .banner-content a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    position: relative;
+    transition: all .5s;
+}
+
+#banner-container .banner-content a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f833;
+    height: 2px;
+}
+
+/* Animated underline */
+#banner-container .banner-content a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffffff;
+    transition: all .5s ease;
+}
+
+#banner-container .banner-content a:hover::after {
+    width: 100%;
+}
+
+/* featured products */
+#featured-products .cards{
+    flex-wrap: nowrap;
+}
+
+#featured-products .card{
+    flex: 0 0 auto;  
+    width: auto;   
+    position: static;   
+}
+
+#featured-products .cards .cart-detail{
+    position: static;   
 }
