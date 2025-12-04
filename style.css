@@ -48,6 +48,18 @@ a{
     color: #212529;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
 #home .header{
     padding: 16px 24px;
     display: flex;
@@ -468,7 +480,8 @@ a{
 }
 
 .products .cards .cart-detail{
-    display: none;
+    /* display: none; */
+    visibility: hidden;
     position: absolute;      
     bottom: -45px;            
     left: 0;
@@ -478,6 +491,7 @@ a{
 }
 
 .products .cards li.card:hover .cart-detail{
+    visibility: visible;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -622,6 +636,10 @@ a{
 }
 
 /* featured products */
+#featured-products{
+    margin-bottom: 0;
+}
+
 #featured-products .cards{
     flex-wrap: nowrap;
 }
@@ -629,9 +647,73 @@ a{
 #featured-products .card{
     flex: 0 0 auto;  
     width: auto;   
-    position: static;   
+    position: static;  
 }
 
 #featured-products .cards .cart-detail{
     position: static;   
+}
+
+/* contact */
+#contact{
+    margin-bottom: 48px;
+}
+#contact .contact-container{
+    width: 100%;
+    height: 300px;
+    background: url(images/banner-newsletter.jpg) no-repeat;
+    background-size: cover;
+    padding: 48px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    flex-wrap: wrap;
+    color: #f8f8f8;
+}
+
+#contact .contact-container .left{
+    width: 35%;
+}
+
+#contact .contact-container .left h2{
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+#contact .contact-container .right{
+    width: 35%;
+}
+
+#contact .contact-container .right div{
+    margin-bottom: 16px;
+}
+#contact .contact-container .right div input{
+    padding:6px 12px;
+    color: #747474;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid #fff;
+    line-height: 1.5;
+}
+
+#contact .contact-container .right div input:focus{
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+}
+
+#contact .contact-container .right button{
+    background-color: #212529;
+    width: 100%;
+    color: #f8f8f8;
+    transition: all 0.15s ease-in-out;
+    padding:6px 12px;
+    line-height: 1.5;
+    font-size: 16px;
+    font-weight: 400;
+}
+#contact .contact-container .right button:hover{
+    background-color: #424649;
 }
